@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'ember-audio',
+    modulePrefix: 'alex-alex-alex-ember-audio-project',
     environment: environment,
     rootURL: '/',
     locationType: 'auto',

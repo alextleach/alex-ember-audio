@@ -1,8 +1,9 @@
 {
-  "name": "ember-audio",
+  "name": "alex-alex-alex-ember-audio-project",
   "dependencies": {
     "ember": "~2.7.0",
     "ember-cli-shims": "0.1.1",
-    "ember-qunit-notifications": "0.1.0"
+    "ember-qunit-notifications": "0.1.0",
+    "font-awesome": "~4.5.0"
   }
 }

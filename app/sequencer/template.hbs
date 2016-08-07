@@ -1,0 +1,35 @@
+<div class="app">
+    <nav class="nav">
+      <div class="container">
+      <h3 class="nav__title">Ember Audio</h3>
+    </div>
+  </nav>
+
+    <div class="container main">
+    {{#if isLoading}}
+        {{!-- Some loading indicator... --}}
+      {{else}}
+        <div class="controls">
+
+          <button class="btn btn-primary" {{action 'play'}}>PLAY {{fa-icon "play"}}</button>
+          <div>
+            <label>Tempo {{input value=bpm}}</label>
+          </div>
+        </div>
+
+        <div class="beat-machine">
+          {{#each beatTracks as |beatTrack|}}
+          <p class="text">{{beatTrack.name}}</p>
+            <div class="beat-lane">
+
+              {{#each beatTrack.beats as |beat|}}
+                <div class="beat-pad" {{action 'toggleActive' beat}}>
+                  <div class="pad {{if beat.active 'active'}} {{if beat.isPlaying 'playing'}} {{if beat.currentTimeIsPlaying 'highlighted'}}"></div>
+                </div>
+              {{/each}}
+            </div>
+          {{/each}}
+        </div>
+      {{/if}}
+    </div>
+  </div>
